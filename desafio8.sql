@@ -5,11 +5,6 @@ SELECT
     AB.album_name as album
 FROM SpotifyClone.artista as A
     INNER JOIN SpotifyClone.album as AB ON AB.artista_id = A.artista_id
-GROUP BY
-    artista_name,
-    album_name
-ORDER BY
-    artista_name,
-    album_name
-LIMIT 2
-OFFSET 3;
+WHERE
+    A.artista_name = 'Elis Regina'
+LIMIT 2;
